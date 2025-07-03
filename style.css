@@ -52,7 +52,7 @@ button{
     
 }
 
-.screen{
+#screen{
     grid-column-end: span 4;
     color:#fff;
     font-size: 3rem;
