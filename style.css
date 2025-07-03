@@ -1,0 +1,163 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,0,0,1) 5%, rgba(92,22,255,1) 28.2%, rgba(35,0,126,1) 70%, rgba(0,0,0,1) 95% );
+    height: 100vh;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color:#fff;
+}
+
+.calculator-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.buttons{
+    font-size: 2.5rem;
+    height: 500px;
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    box-shadow: 0px -2px 45px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -2px 45px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 45px 0px rgba(0,0,0,0.75);
+    
+}
+
+button{
+    font-size: 1.5rem;
+    border-radius: 40px;
+    background-color: rgba(93, 39, 220, 0.4);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.screen{
+    grid-column-end: span 4;
+    color:#fff;
+    font-size: 3rem;
+    width: 100%;
+    background-color: rgba(82, 128, 157, 0.1);   
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.double{
+    grid-column-end: span 2;
+    background-color: rgba(82, 128, 157, 0.3);
+}
+
+
+.equals{
+    background-color: rgba(12, 104, 161, 0.3);
+}
+
+.operation{
+    background-color: rgba(139, 12, 186, 0.3);
+}
+
+.arrow{
+    font-size: 50px;
+}
+
+/*-----HOVERS-----*/
+
+button:hover{
+    background-color: rgba(93, 39, 220, 0.2);
+}
+
+.operation:hover{
+    background-color: rgba(139, 12, 186, 0.5);
+}
+
+.equals:hover{
+    background-color: rgba(12, 104, 161, 0.2);
+}
+
+.double:hover{
+    background-color: rgba(29, 29, 29, 0.5);
+}
+
+/*-----MEDIAQUERIES-----*/
+
+
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .buttons {
+        width: 35%;
+        height: 450px;
+    }
+
+    .screen {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        width: 50%;
+        height: 400px;
+    }
+
+    .screen {
+        font-size: 2.2rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .buttons {
+        width: 80%;
+        height: 350px;
+    }
+
+    .screen {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
