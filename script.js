@@ -1,10 +1,15 @@
-const screenValue = document.getElementById('screen')
+const screen = document.getElementById('screen')
 const allButons = document.getElementsByTagName('button')
 
+let screenValue = document.createElement('p');
+screenValue.classList.add("screen-value");
 screenValue.innerText = "0" //valor por defecto
+screen.append(screenValue)
+
+// let screenValue.innerText = "0" //valor por defecto
 
 //strings para que no haya problemas con el innerText
-const options = ["0","1","2","3","4","5","6","7","8","9","−","+","÷","⨯",","]
+const options = ["0","1","2","3","4","5","6","7","8","9","−","+","÷","×",","]
 
 for(let index = 0; index < allButons.length; index++) { //por cada boton crea un evento
     allButons[index].addEventListener('click',()=>{
@@ -22,7 +27,7 @@ for(let index = 0; index < allButons.length; index++) { //por cada boton crea un
             if(currentValue == "="){
                 let expression = screenValue.innerText
                 .replace(/÷/g, "/") //convierte los simbolos visuales de la calc a operadores reales
-                .replace(/⨯/g, "*") //la "g" indica que se reemplazan todos los símbolos que haya
+                .replace(/×/g, "*") //la "g" indica que se reemplazan todos los símbolos que haya
                 .replace(/−/g, "-")
                 .replace(/,/g, ".")
 
@@ -43,12 +48,12 @@ for(let index = 0; index < allButons.length; index++) { //por cada boton crea un
     })
 }   
 
-function clearDisplay() {
-    screenValue.innerText = "0"
-}
+const clearDisplay = () => {
+    screenValue.innerText = "0";
+};
 
-function deleteNumber() {
-    screenValue.innerText = screenValue.innerText.slice(0, -1); //borra el último número
-    if (screenValue.innerText === "") screenValue.innerText = "0"; //si ya no hay más números muestra el cero default
-}
+const deleteNumber = () => {
+    screenValue.innerText = screenValue.innerText.slice(0, -1); // borra el último número
+    if (screenValue.innerText === "") screenValue.innerText = "0"; // si ya no hay más números, muestra el cero por defecto
+};
 
