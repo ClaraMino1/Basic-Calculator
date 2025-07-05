@@ -24,7 +24,7 @@ main{
 .calculator-container{
     background-color: rgba(0, 0, 0, 0.3);
     height: auto;
-    width:25vw;
+    width:20vw;
     border-radius: 30px;
 }
 
@@ -108,6 +108,12 @@ button:focus { /*para evitar que se deforme*/
 }
 
 /*-------MEDIAQUERIES---------*/
+@media (max-width: 1698px) {
+  .calculator-container {
+    width: 30vw;
+  }
+}
+
 @media (max-width: 1024px) {
   .calculator-container {
     width: 40vw;
